@@ -1,5 +1,5 @@
-#1. How many users do we have?
-    Answer: 130
+# 1. How many users do we have?
+    <br> Answer: 130 
     
     ```sql
     select 
@@ -7,8 +7,8 @@
     from dbt_pzhang1195gmailcom.stg_postgres__users
     ```
 
-#2. On average, how many orders do we receive per hour?
-    Answer: 7.52
+# 2. On average, how many orders do we receive per hour?
+    <br> Answer: 7.52
     
     ''' sql
     with orders_per_hour as (
@@ -25,8 +25,8 @@
     ''''
 
     
-#3. On average, how long does an order take from being placed to being delivered?
-    Answer: 3.89 days
+# 3. On average, how long does an order take from being placed to being delivered?
+    <br> Answer: 3.89 days
     
     '''sql
     with order_time as (
@@ -41,8 +41,11 @@
    from order_time
   '''
 
-#4. How many users have only made one purchase? Two purchases? Three+ purchases? Note: you should consider a purchase to be a single order. In other words, if a user places one order for 3 products, they are considered to have made 1 purchase.
-    Answer: 1 purchase = 25, 2 purchases = 28, 3+ purchases = 71
+# 4. How many users have only made one purchase? Two purchases? Three+ purchases? Note: you should consider a purchase to be a single order. In other words, if a user places one order for 3 products, they are considered to have made 1 purchase.
+    <br> Answer: 
+        - 1 purchase = 25 
+        - 2 purchases = 28
+        - 3+ purchases = 71
     
     '''sql
     with orders as (
@@ -63,8 +66,8 @@
     group by order_bin
     ''''
 
-#5. On average, how many unique sessions do we have per hour?
-    Answer: 16.33
+# 5. On average, how many unique sessions do we have per hour?
+    <br> Answer: 16.33
     
     '''sql
     with sessions_per_hour as (
