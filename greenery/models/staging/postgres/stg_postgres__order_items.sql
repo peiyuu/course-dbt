@@ -11,7 +11,7 @@ with source as (
     select * from {{source('postgres','order_items' )}}
 )
 
-, renamed as (
+, renamed_recast as (
     select 
         order_id as order_guid
         , product_id as product_guid
@@ -19,4 +19,4 @@ with source as (
     from source
 )
 
-select * from renamed
+select * from renamed_recast

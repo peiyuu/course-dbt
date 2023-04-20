@@ -8,7 +8,7 @@ with source as (
     select * from {{source('postgres','orders')}}
 )
 
-, renamed as (
+, renamed_recast as (
     select 
         order_id as order_guid
         , user_id as user_guid
@@ -26,4 +26,4 @@ with source as (
     from source
 )
 
-select * from renamed
+select * from renamed_recast

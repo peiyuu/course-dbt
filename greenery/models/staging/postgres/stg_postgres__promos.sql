@@ -8,7 +8,7 @@ with source as (
     select * from {{source('postgres','promos')}}
 )
 
-, renamed as (
+, renamed_recast as (
     select
         lower(PROMO_ID) as promo_id
         , DISCOUNT
@@ -16,4 +16,4 @@ with source as (
     from source
 )
 
-select * from renamed
+select * from renamed_recast
