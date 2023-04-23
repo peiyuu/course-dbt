@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fct_page_views
+    description: "daily product web page views"
+    columns:
+      - name: key
+        description: "The primary key for this table"
+        tests:
+          - unique
+
+  - name: fct_product_orders
+    description: "daily product orders"
+    columns:
+      - name: key
+        description: "The primary key for this table"
+        tests:
+          - unique
+
+  - name: agg_daily_product_activity
+    description: "aggregated summary of daily product orders and events"
+    columns:
+      - name: key
+        description: "The primary key for this table"
+        tests:
+          - unique
+          

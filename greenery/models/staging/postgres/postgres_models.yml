@@ -24,7 +24,6 @@ models:
       - name: order_guid
         description: "The primary key for this table"
         tests:
-          - unique
           - not_null
   
   - name: stg_postgres__orders

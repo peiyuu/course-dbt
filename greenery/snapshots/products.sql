@@ -8,11 +8,10 @@
 
         strategy='check',
         unique_key='product_id',
-        check_cols=['inventory'],
+        check_cols=['inventory']
     )
 }}
 
 select * from {{source('postgres', 'products')}}
 
--- define end of a snapshot
 {% endsnapshot %}
