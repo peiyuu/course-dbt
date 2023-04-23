@@ -10,7 +10,7 @@ select
     product_guid, 
     product_name,
     count(distinct order_guid) as total_orders_per_day
-from int_product_orders
+from {{ref('int_product_orders')}} 
 group by 
     created_date, 
     product_guid, 
