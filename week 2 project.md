@@ -42,4 +42,4 @@ I added an intermediate table to join orders to products to measure product perf
 Answer: I concatenated the date and product_guid to create a primary key for the fact tables. Assuming that the keys are unique, I added tests on the model layer to verify this assumption. On the staging layer, I added tests to verify the primary id's for the tables are not null. 
  
 ### Which products had their inventory change from week 1 to week 2? 
-#### Answer: Pathos and String of Pearls
+#### Answer: Monstera, Philodendron, Pothos, and String of pearls
