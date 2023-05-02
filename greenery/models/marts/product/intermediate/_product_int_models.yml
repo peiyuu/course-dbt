@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_prod_sessions_agg
+    description: "aggregated summary of sessions grouped by products"
+
+  - name: int_user_sessions_agg
+    description: "aggregated summary of sessions grouped by users"
+ 
+
+          

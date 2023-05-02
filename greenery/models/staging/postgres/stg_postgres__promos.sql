@@ -10,9 +10,9 @@ with source as (
 
 , renamed_recast as (
     select
-        lower(PROMO_ID) as promo_id
-        , DISCOUNT
-        , STATUS as promo_status
+        lower(promo_id) as promo_id
+        , discount
+        , status as promo_status
     from source
 )
 

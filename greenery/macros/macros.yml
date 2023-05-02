@@ -1,0 +1,12 @@
+version: 2
+
+macros:
+  - name: get_event_type
+    description: create new aggregate column based on event_type
+    docs:
+      show: true
+  - name: grant
+    description: grant persmissions to users based on role
+    docs:
+      show: true
+  

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "order details"
+
+  - name: dim_users_info
+    description: "users info"
+    columns:
+      - name: user_guid
+        description: "The primary key for this table"
+        tests:
+          - unique
