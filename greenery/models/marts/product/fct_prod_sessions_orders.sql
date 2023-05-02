@@ -14,8 +14,7 @@ with prod_sessions as (
 
 , final as (
     select
-       coalesce(o.product_guid, p.product_guid) as product_guid
-        , p.session_guid
+        p.session_guid
         , p.order_guid
         , p.created_at as session_created_at
         , p.page_view
@@ -34,6 +33,7 @@ with prod_sessions as (
         , o.quantity
         , o.discount
         , o.promo_status
+        , coalesce(o.product_guid, p.product_guid) as product_guid
     from prod_sessions p
     left join orders o on o.order_guid = p.order_guid
 )

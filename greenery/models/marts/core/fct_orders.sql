@@ -34,8 +34,8 @@ with orders as (
         , p.discount
         , p.promo_status
     from orders o
-    join order_items on o.order_guid = order_items.order_guid
-    join promos p on p.promo_id = o.promo_id
+    left join order_items on o.order_guid = order_items.order_guid
+    left join promos p on p.promo_id = o.promo_id
 ) 
 
 select * from final
