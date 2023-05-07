@@ -21,6 +21,7 @@ with prod_sessions as (
         , p.add_to_cart
         , p.checkout 
         , p.package_shipped
+        , o.user_guid
         , o.created_at as order_created_at
         , o.order_cost
         , o.shipping_cost
